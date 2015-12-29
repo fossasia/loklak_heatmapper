@@ -8,3 +8,7 @@ Since it's plain HTML/JS, you only have to download both `index.html` and `scrip
 Every time you change the content of the text box with a new postal code, the results should update automatically. However if it doesn't work, you can use the *Search!* button at the right.
 
 > Your browser must have JavaScript enabled, and Internet connection
+
+## Screenshot
+
+![OSM Postal Geolocation](https://raw.githubusercontent.com/YagoGG/GCI2015/master/OSM%20Postal%20Geolocation/Screenshots/Screenshot.png)
