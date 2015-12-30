@@ -12,3 +12,9 @@ Every time you change the content of the text box with a new film name and press
 
 You can find a live demo [here](http://yagogg.github.io/GCI2015/loklak%20Movie%20Tweets/).  
 *(Hosted by GitHub Pages)*
+
+## Screenshots
+
+![loklak Move Tweets search form](https://raw.githubusercontent.com/YagoGG/GCI2015/gh-pages/loklak%20Movie%20Tweets/Screenshots/Screenshot1.png)
+
+![loklak Move Tweets results for "star wars"](https://raw.githubusercontent.com/YagoGG/GCI2015/gh-pages/loklak%20Movie%20Tweets/Screenshots/Screenshot2.png)
