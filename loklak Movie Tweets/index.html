@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <title>GCI | Loklak Movie Tweets</title>
+</head>
+<body>
+  <div class="container">
+    <div class="page-header">
+      <h1>Loklak Movie Tweets</h1>
+      <h2><small>Google Code-in - FOSSASIA</small></h2>
+    </div>
+    <h2>Search a movie</h2>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="input-group">
+          <input type="text" id="film" class="form-control" placeholder="e.g.: matrix" onchange="searchTweets();">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button" onclick="searchTweets();">Search!</button>
+          </span>
+        </div>
+        <br>
+        <div id="loading" class="well" style="display: none;">
+          <h4 style="text-align: center;">Loading...</h4>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" style="width: 100%;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><br>
+    <div id="resultsBox" style="display: none;">
+      <h2>Results</h2>
+      <div id="tweetCount" class="alert alert-info"></div>
+      <ul id="tweets" class="list-group">
+      </ul>
+    </div>
+    <footer>
+      <hr>
+      <div class="well">
+        <b>Google Code-in 2015</b> | Made by Yago González with &lt;3, for the Open Source community<br>
+          Powered by <a href="http://getbootstrap.com"><b>Bootstrap</b></a> and the <a href="http://loklak.org"><b>loklak public API</b></a>
+      </div>
+    </footer>
+  </div>
+  <template>
+    <li class="list-group-item">
+      <div class="media">
+        <div class="media-left">
+          <img class="media-object" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTFmMmVkZjk4NSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1MWYyZWRmOTg1Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxNC41IiB5PSIzNi44Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==">
+        </div>
+        <div class="media-body">
+          <h4>@user <small>(30 Dic 13:37)</small></h4>
+          <span>Text</span>
+        </div>
+      </div>
+    </li>
+  </template>
+  <!-- jQuery JS -->
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
+  <script id="loklakAPICall"></script>
+</body>
+</html>
