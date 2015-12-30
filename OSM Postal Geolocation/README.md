@@ -9,6 +9,10 @@ Every time you change the content of the text box with a new postal code, the re
 
 > Your browser must have JavaScript enabled, and Internet connection
 
+You can find a live demo [here](http://yagogg.github.io/GCI2015/OSM%20Postal%20Geolocation/).  
+*(Hosted by GitHub Pages)*
+
+
 ## Screenshot
 
-![OSM Postal Geolocation](https://raw.githubusercontent.com/YagoGG/GCI2015/master/OSM%20Postal%20Geolocation/Screenshots/Screenshot.png)
+![OSM Postal Geolocation](https://raw.githubusercontent.com/YagoGG/GCI2015/gh-pages/OSM%20Postal%20Geolocation/Screenshots/Screenshot.png)
