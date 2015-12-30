@@ -15,6 +15,9 @@ Every time you enter new files (through the `<input>` or drag and drop), the res
 
 > Your browser must have JavaScript enabled
 
+You can find a live demo [here](http://yagogg.github.io/GCI2015/Metadata%20Viewer/).  
+*(Hosted by GitHub Pages)*
+
 ## Screenshots
 
-![Metadata Viewer screenshot](https://raw.githubusercontent.com/YagoGG/GCI2015/master/Metadata%20Viewer/Screenshots/Screenshot.png)
+![Metadata Viewer screenshot](https://raw.githubusercontent.com/YagoGG/GCI2015/gh-pages/Metadata%20Viewer/Screenshots/Screenshot.png)
