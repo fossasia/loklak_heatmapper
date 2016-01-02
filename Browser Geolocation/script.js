@@ -14,8 +14,8 @@ function geolocSuccess(position) {
 	var lonMin = Math.floor(Math.abs(position.coords.longitude) % 1 * 60);
 	var lonSec = Math.abs(position.coords.longitude) % 1 * 60 % 1 * 60;
 
-	document.getElementById('latitude').innerHTML = position.coords.latitude + 'ºN (' + latDeg + 'º ' + latMin + '\' ' + latSec + '")';
-	document.getElementById('longitude').innerHTML = position.coords.longitude + 'ºE (' + lonDeg + 'º ' + lonMin + '\' ' + lonSec + '")';
+	document.getElementById('latitude').innerHTML = position.coords.latitude + '°N (' + latDeg + '° ' + latMin + '\' ' + latSec + '")';
+	document.getElementById('longitude').innerHTML = position.coords.longitude + '°E (' + lonDeg + '° ' + lonMin + '\' ' + lonSec + '")';
 }
 
 function geolocError(err) {	// Something went wrong when asking for the position
