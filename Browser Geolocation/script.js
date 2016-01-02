@@ -12,8 +12,9 @@ function initializeMap() {
 function updateMap(coords) {
 	var mapBox = document.getElementById('map');
 	if(mapBox.style.display == 'none') {	// The map box hasn't been shown before
-		document.getElementById('map').style.display = 'block';	// Display the map
-		google.maps.event.trigger(map, "resize");	// Make the map print itself again (to avoid grey box)
+		mapBox.style.display = 'block';	// Display the map
+		google.maps.event.trigger(map, 'resize');	// Make the map print itself again (to avoid grey box)
+		document.getElementById('loading').style.display = 'none';	// Hide 'loading' progress bar
 	}
 
 	var pos = new google.maps.LatLng(coords.latitude, coords.longitude);	// Save coords as a LatLng object
