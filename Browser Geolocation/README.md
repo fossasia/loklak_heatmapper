@@ -12,3 +12,7 @@ After loading the page, you'll be prompted by your web browser to give the appli
 
 You can find a live demo [here](http://yagogg.github.io/GCI2015/Browser%20Geolocation).  
 *(Hosted by GitHub Pages)*
+
+## Screenshots
+
+![Browser Geolocation working](https://raw.githubusercontent.com/YagoGG/GCI2015/gh-pages/Browser%20Geolocation/Screenshots/Screenshot.png)
