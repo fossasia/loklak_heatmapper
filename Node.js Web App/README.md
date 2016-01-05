@@ -29,10 +29,10 @@ node app.js
 ## Screenshots
 
 ### Login screen
-![Login screen](https://raw.githubusercontent.com/YagoGG/GCI2015/master/Node.js%20Web%20App/Screenshots/Login.png)
+![Login screen](https://raw.githubusercontent.com/YagoGG/GCI2015/gh-pages/Node.js%20Web%20App/Screenshots/Login.png)
 
 ### Register screen
-![Register screen](https://raw.githubusercontent.com/YagoGG/GCI2015/master/Node.js%20Web%20App/Screenshots/Register.png)
+![Register screen](https://raw.githubusercontent.com/YagoGG/GCI2015/gh-pages/Node.js%20Web%20App/Screenshots/Register.png)
 
 ### Profile screen
-![Profile screen](https://raw.githubusercontent.com/YagoGG/GCI2015/master/Node.js%20Web%20App/Screenshots/Profile.png)
+![Profile screen](https://raw.githubusercontent.com/YagoGG/GCI2015/gh-pages/Node.js%20Web%20App/Screenshots/Profile.png)
