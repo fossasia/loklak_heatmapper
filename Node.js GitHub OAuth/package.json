@@ -1,0 +1,27 @@
+{
+  "name": "node.js-github-oauth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "continuation-local-storage": "^3.1.4",
+    "express": "^4.13.3",
+    "jade": "^1.11.0",
+    "querystring": "^0.2.0",
+    "request-promise": "^1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YagoGG/GCI2015.git"
+  },
+  "author": "Yago González",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YagoGG/GCI2015/issues"
+  },
+  "homepage": "https://github.com/YagoGG/GCI2015#readme"
+}
