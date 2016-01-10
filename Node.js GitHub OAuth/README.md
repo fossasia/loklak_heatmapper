@@ -52,3 +52,9 @@ node app.js
 The application will now be running at http://localhost, with the port you specified in the config file.
 
 > Your browser must have JavaScript enabled, and Internet connection to use the web application
+
+## Screenshots
+
+![Node.js GitHub OAuth welcome screen](https://raw.githubusercontent.com/YagoGG/GCI2015/gh-pages/Node.js%20GitHub%20OAuth/Screenshots/Screenshot1.png)
+
+![Node.js GitHub OAuth user profile](https://raw.githubusercontent.com/YagoGG/GCI2015/gh-pages/Node.js%20GitHub%20OAuth/Screenshots/Screenshot2.png)
