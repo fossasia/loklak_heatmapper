@@ -37,6 +37,8 @@ config.appPort = 8080;
 config.ghClientID = 'a1b2c3d4f5g6h7i8j9k0';
 // Your app's client secret (more info below)
 config.ghClientSecret = 'a1b2c3d4f5g6h7i8j9k0l1m2n3o4p5q6r7s8t7u0';
+// A random session secret (https://github.com/expressjs/session#secret)
+config.sessionSecret = 'ssssssshhhhh!';
 
 module.exports = config;
 ```

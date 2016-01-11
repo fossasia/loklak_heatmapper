@@ -1,5 +1,8 @@
 // DEPENDENCIES
 const express = require('express');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const flash = require('express-flash');
 const crypto = require('crypto');
 const request = require('request-promise');
 const querystring = require('querystring');
@@ -9,13 +12,16 @@ const config = require('./config.js');
 var app = express();
 
 app.use(express.static(__dirname));
+app.use(session({
+  secret: config.sessionSecret,
+  saveUninitialized: false,
+  resave: false
+}));
+app.use(cookieParser(config.sessionSecret));
+app.use(flash());
 
 app.set('views', __dirname);
 app.set('view engine', 'jade');
-
-// GLOBAL SCOPE VARIABLES
-var randomToken = '';
-var accessToken = '';
 
 app.get('/', function(req, res) {
   res.render('index');
@@ -25,7 +31,7 @@ app.get('/login', function(req, res) {
   // Create random token to prevent CSRF attacks
   crypto.randomBytes(16, function(err, buf) {
     if(err) throw err;  // Something went wrong
-    randomToken = buf.toString('hex');
+    var randomToken = buf.toString('hex');
 
     // Set the URL with the corresponding parameters to query GitHub's OAuth API
     const params = querystring.stringify({
@@ -35,6 +41,8 @@ app.get('/login', function(req, res) {
       state: randomToken
     });
 
+    req.flash('randomToken', randomToken);
+
     var url = 'https://github.com/login/oauth/authorize?' + params;
 
     res.redirect(url);  // Redirect the user to GitHub
@@ -43,6 +51,7 @@ app.get('/login', function(req, res) {
 
 // Route called by GitHub's OAuth API after requesting the permissions
 app.get('/redirect', function(req, res) {
+  var randomToken = req.flash('randomToken')[0];
   if(req.query.state == randomToken) {  // States match
     request.post({
       uri: 'https://github.com/login/oauth/access_token',
@@ -55,7 +64,7 @@ app.get('/redirect', function(req, res) {
       }
     })
     .then(function(body) {
-        accessToken = querystring.parse(body).access_token;
+        req.flash('accessToken', querystring.parse(body).access_token);
 
         res.redirect('/profile');
     })
@@ -69,6 +78,8 @@ app.get('/redirect', function(req, res) {
 });
 
 app.get('/profile', function(req, res) {
+  var accessToken = req.flash('accessToken')[0];
+
   // Gather user's info
   const userPromise = request.get({
     uri: 'https://api.github.com/user',
@@ -125,7 +136,7 @@ app.get('/profile', function(req, res) {
 });
 
 // SERVER INSTANCE
-app.listen(8080, function() {
+app.listen(config.appPort, function() {
   console.log('--------------------------------');
   console.log(' Server running at port 8080...')
   console.log('--------------------------------');
