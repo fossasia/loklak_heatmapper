@@ -13,3 +13,7 @@ The map will update every time you click on the *Search!* button.
 
 You can find a live demo [here](http://yagogg.github.io/GCI2015/loklak%20Heatmap/).  
 *(Hosted by GitHub Pages)*
+
+## Screenshots
+
+![loklak Heatmap results for 1000 tweets about "google"](https://raw.githubusercontent.com/YagoGG/GCI2015/gh-pages/loklak%20Heatmap/Screenshots/Screenshot.png)
